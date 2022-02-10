@@ -12,8 +12,7 @@ def portfoliocost(filename):
             try:
                 runningTotal += float(row[1]) * float(row[2]) # Num shares * cost of each share added into a running total
             except ValueError: # If rows could not be processed for values, raise exception and continue processing value
-                print('Could not parse value. Skipping row and continuing.')
-                continue
+                pass
     return runningTotal
 
 cost = portfoliocost('Data/portfolio.csv')
